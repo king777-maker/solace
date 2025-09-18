@@ -1,0 +1,101 @@
+/* Global Reset + Typography */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  height: 100%;
+  font-family: "Inter", sans-serif;
+  background: linear-gradient(180deg, #f7f6f5 0%, #ece9e6 100%);
+  color: #2e2e2e;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Layout */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+  padding: 2rem;
+}
+
+/* Header + Footer */
+header, footer {
+  padding: 1rem 2rem;
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+footer {
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+  text-align: center;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+/* Navigation */
+nav {
+  display: flex;
+  gap: 1rem;
+}
+
+nav a {
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+  transition: all 0.3s ease;
+  color: #2e2e2e;
+}
+
+nav a.active {
+  background: #dcdcdc;
+  font-weight: 600;
+}
+
+/* Buttons */
+button, .btn {
+  padding: 0.7rem 1.4rem;
+  border: none;
+  border-radius: 2rem;
+  cursor: pointer;
+  background: linear-gradient(145deg, #e4e2df, #ffffff);
+  color: #2e2e2e;
+  font-weight: 500;
+  box-shadow: 4px 4px 8px rgba(0,0,0,0.05),
+              -4px -4px 8px rgba(255,255,255,0.9);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+button:hover, .btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 6px 6px 12px rgba(0,0,0,0.08),
+              -6px -6px 12px rgba(255,255,255,1);
+}
+
+/* Minimal Cards */
+.card {
+  background: rgba(255,255,255,0.7);
+  padding: 1.5rem;
+  border-radius: 1.5rem;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+}
+
+/* Parallax background helper */
+.parallax {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
